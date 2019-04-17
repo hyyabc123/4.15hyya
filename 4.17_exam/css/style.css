@@ -1,0 +1,92 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+.wrap header span, .wrap .main .item .top span, .wrap .main .item .top h3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body, html {
+  width: 100%;
+  height: 100%;
+}
+
+.wrap {
+  width: 100%;
+  height: 100%;
+}
+
+.wrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.wrap header {
+  width: 100%;
+  height: 1.06667rem;
+  border-bottom: 1px solid #ccc;
+  display: flex;
+}
+
+.wrap header span {
+  flex: 1;
+}
+
+.wrap .main {
+  flex: 1;
+  overflow: auto;
+}
+
+.wrap .main .item {
+  width: 100%;
+  height: 3.2rem;
+  padding: 0.26667rem;
+  margin: 0.26667rem 0;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+.wrap .main .item .top {
+  width: 100%;
+  height: 1.33333rem;
+  background: #FD6060;
+  display: flex;
+  border-radius: 0.26667rem;
+}
+
+.wrap .main .item .top span {
+  flex: 1;
+}
+
+.wrap .main .item .top h3 {
+  flex: 1;
+  font-size: 0.8rem;
+}
+
+.wrap .main .item .top p {
+  flex: 7;
+  display: flex;
+  align-items: center;
+  text-align: right;
+  font-size: 0.53333rem;
+}
+
+.wrap .main .item .bot {
+  width: 100%;
+  height: 1.33333rem;
+  margin-top: 0.26667rem;
+}
+
+.wrap .main .item .bot li {
+  color: #4BC091;
+}
+
+.wrap .main .item .bot p {
+  color: #A4A4A4;
+}
