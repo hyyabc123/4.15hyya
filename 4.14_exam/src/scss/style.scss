@@ -1,0 +1,80 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+$fontsize:37.5px !default;
+@function rem($font){
+    @return $font/$fontsize *1rem
+}
+%center{        
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin fn($width:100%,$height:100%) {
+    width: $width;  
+    height: $height;
+}
+
+html,body{
+    @include fn;
+}
+.wrap{
+    @include fn;
+    display: flex;
+    flex-direction: column;
+    background: #EDEDED;
+}
+header{
+    @include fn(100%,rem(40px));
+    display: flex;
+    background: white;
+    span{
+        flex: 1;
+        @extend %center;
+        transform: scale(1.6);
+    }
+    .white{
+        flex: 5
+    }
+    .find{
+        font-size: rem(14px);
+    }
+    i{
+        flex: .5
+    }
+}
+main{
+    flex: 1;
+    @include fn;   
+    overflow: auto;
+    li{
+        background: white;
+        @include fn(100%,rem(40px));
+        display: flex;
+        margin: rem(10px) 0;
+        span{
+            flex: 1;
+            @extend %center;
+        }
+        i{
+            flex: 3;
+        }
+    }
+}
+footer{
+    @include fn(100%,rem(50px));
+    display: flex;
+    background: #F7F7F7;;
+    div{
+        flex: 1;
+        @extend %center;
+        display: flex;
+        flex-direction: column;
+
+    }
+}
+

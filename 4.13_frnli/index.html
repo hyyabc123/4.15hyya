@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script>
+        // var vm = new Vue({
+        //     data: {
+        //         obj: {
+        //             a: 1
+        //         }
+        //     },
+        //     created: function () {
+        //         console.log(this.obj);
+        //     }
+        // });
+
+        // var Book = {}
+        // var name = '';
+        // Object.defineProperty(Book, 'name', {
+        //     set: function (value) {
+        //         name = value;
+        //         console.log('你取了一个书名叫做' + value);
+        //     },
+        //     get: function () {
+        //         return '《' + name + '》'
+        //     }
+        // })
+
+        // Book.name = 'vue权威指南';  // 你取了一个书名叫做vue权威指南
+        // console.log(Book.name);
+        
+        // let book = {};
+        // Object.defineProperty(book,"name",{ 
+        //     set:function (value) {  
+        //         name =value 
+        //     },   
+        //     get:function () {  
+        //         return  "《"+ name+"》"
+        //     }         
+        // })
+        // book.name= "vue"
+        // console.log(book.name)
+
+
+        let book = {}
+            Object.defineProperty(book,"name",{
+                set:function(value){
+                    name =value 
+                },
+                get:function(){
+                    return "《" + name +"》" 
+                }
+            })
+
+            book.name = "zs"
+            console.log(book.name)
+            console.log(book)
+
+    </script>
+</body>
+
+</html>

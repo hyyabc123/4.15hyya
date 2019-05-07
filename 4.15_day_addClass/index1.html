@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            list-style: none;
+        }
+
+        .box {
+            width: 20px;
+            height: 20px;
+            display: inline-block;
+            background: #ccc;
+        }
+
+        ul>li>.active,
+        .allbtn>.active {
+            background: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <ul>
+            <li v-for="(item,index) in list">
+                <span :class="[{active:item.flag},box]" @click="evefn(item)"></span>
+                <span>{{ item.tit }}</span>
+            </li>
+
+        </ul>
+        <div class="allbtn">
+            <span :class="[{active:allflag},box]" @click="allfn"></span>
+            <span>全选</span>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script>
+        new Vue({
+            el: "#app",
+            data: {
+                allflag: false,
+                box: "box",
+                allbtn: false,
+                list: [
+                    {
+                        flag: false,
+                        tit: "苹果"
+                    },
+                    {
+                        flag: false,
+                        tit: "香蕉"
+                    },
+                    {
+                        flag: false,
+                        tit: "草莓"
+                    }
+                ]
+            },
+            methods: {
+                evefn(item) {
+                    item.flag = !item.flag
+                    this.allflag = this.list.every(item => item.flag)
+                },
+                allfn() {
+                    this.allflag = !this.allflag
+                    this.list.forEach(item => item.flag = this.allflag)
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

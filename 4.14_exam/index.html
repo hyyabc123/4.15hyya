@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="wrap" id="app">
+        <header class="header">
+            <i></i>
+            <span class=" find">{{find}}</span>
+            <span class=" white"></span>
+            <span class="iconfont icon-fangdajing"></span>
+            <span class="iconfont icon-pause-outline"></span>
+            <i></i>
+        </header>
+        <main class="main">
+            <li v-for="(item,index) in main">
+                <span :class="item.class"></span>
+                <span>{{item.tit}}</span>
+                <i></i>
+                <span :class="item.class1"></span>                
+            </li>
+        </main>
+        <footer class="footer">
+            <div class="item" v-for="(ite,index) in footerData" @click="">
+                <span  :class="ite.class"></span>
+                <span>{{ ite.tit }}</span>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

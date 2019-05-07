@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            background: red;
+        }
+
+        [v-cloak] {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <p>{{grade}}</p>
+        <div v-html="text"></div>
+
+        <div class="wrap" @click.self.right.prevent="console.log(111)">
+            <button v-on:click.self.right="flag = !flag ">安吉牛</button>
+        </div>
+
+        <li v-for="(value,key,index) in obj">
+            <span>
+                {{key}}:{{value}} {{index}}
+            </span>
+        </li>
+
+
+        <li v-for="(item,index)  in list">
+            <a v-bind:href="item.href">{{item.title}}</a>
+            <img :src="item.src" alt="">
+        </li>
+
+
+
+        <div class="box" v-show="flag" v-cloak>
+
+        </div>
+
+        <input type="text" @click="num++">
+        <p>{{num}}</p>
+        <button @click="fn">w de </button>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script>
+        let v = new Vue({
+            el: "#app",
+            data: {
+                grade: "123879s",
+                flag: false,
+                text: "<p>askjdhaskj</p>",
+                num: 0,
+                obj: {
+                    name: "张三",
+                    age: "12321"
+                },
+                list: [
+                    {
+                        title: "图片一",
+                        src: "http://pic3.nipic.com/20090527/1242397_102231006_2.jpg",
+                        href: 'http://www.baidu.com'
+                    },
+                    {
+                        title: "图片二",
+                        src: "http://pic34.nipic.com/20131027/13940660_180346095374_2.jpg",
+                        href: 'http://www.jd.com'
+                    }
+                ]
+            },
+            methods: {
+                fn() {
+                    console.log(1)
+                }
+            }
+        })
+
+        console.log(v)
+    </script>
+</body>
+
+</html>

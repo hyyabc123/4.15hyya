@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div id="app">
+        <li v-for="(item,index) in  list">     
+            <span>姓名：{{ item.name }}</span>
+            <span>性别：{{ item.sex }}</span>
+            <button @click ="msgfn(item,index)">详情</button>
+            <button @click = "removefn(index)">删除</button>
+        </li>
+        <input type="text" v-model = "name">
+        <select name="" id="" v-model="sex">
+            <option :value="item" v-for="item in sexarr">{{item}}</option>
+        </select>
+        <button @click ="fn">确定</button>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script>
+        new Vue({
+            el:"#app",  
+            data:{
+                name:"",
+                list:[],
+                sex:"女",
+                sexarr:["女","男"]
+            },
+            methods:{
+                fn(){
+                    this.list.push({name:this.name,sex:this.sex})
+                },
+                msgfn(item,index){
+                    console.log(item)
+                    alert(`姓名：${item.name} 性别：${item.sex}`)
+                },
+                removefn(index){
+                    this.list.splice(index,1)
+                }
+            }
+        })    
+    </script>
+</body>
+</html>

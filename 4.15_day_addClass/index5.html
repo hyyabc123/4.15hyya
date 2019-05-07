@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            text-decoration: none;
+            box-sizing: border-box;
+        }
+        span{
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            background: #ccc;;
+        }
+        .active1{
+            background: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <input type="text" v-on:keyup.enter="enterFn" v-model="msg">
+        <li>正在进行</li>
+        <div class="open">
+            <li v-for="(item,index) in list1">
+                <span @click="nextfn(index)"></span>{{item}} <i @click="remove(index)">x</i>
+            </li>
+        </div>
+        <li>已经完成</li>
+        <div class="finish">
+                <li v-for="(item1,index1) in list2" style="color:#ccc;">
+                    <span class="active1" @click="secfn(index1)"></span>{{item1}}<i @click="remove1(index1)">x</i>
+                </li>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script>
+        new Vue({
+            el:"#app",
+            data:{
+                msg:"",
+                list1:[],
+                list2:[]
+            },
+            methods:{
+                enterFn(){
+                    this.list1.push(this.msg)
+                },
+                nextfn(index){
+                    let a = this.list1.splice(index,1)[0]
+                    this.list2.push(a)
+                },
+                secfn(index){
+                    console.log(index)
+                    let b = this.list2.splice(index,1)[0]
+                    this.list1.push(b)
+
+                },
+                remove(index){
+                    this.list1.splice(index,1)
+                },
+                remove1(index){
+                    this.list2.splice(index,1)
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

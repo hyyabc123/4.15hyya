@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <button @click="add">加一</button>
+        <p>{{ price }}</p>
+        <li v-for="(item,index) in subject" @click="sour(index)">
+            {{ item }}
+        </li>
+        <li v-for="(item,index) in scores" v-if="item.score[cur]<60">
+            {{item.name}}
+        </li>
+        <p v-for="(item) in name">
+            {{item.name}} {{item.score[2]}}
+        </p>
+        <my-header></my-header>
+        <my-header></my-header>
+        <input type="text" v-model="dat">
+        {{dat}}
+    </div>
+    <div id="box">
+        <my-header></my-header>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script>
+        Vue.component("myHeader", {
+            template: "<main>lkshadkashk<main>",
+            data() {
+                return {
+                    title: "msg"
+                }
+            }
+        })
+        let vm = new Vue({
+            el: "#app",
+            data: {
+                dat: "",
+                subject: ["语文", "数学", "英语", "体育"],
+                scores: [
+                    { name: "jake", score: [100, 91, 52, 90] },
+                    { name: "luce", score: [95, 93, 90, 80] },
+                    { name: "tom", score: [50, 61, 72, 80] },
+                    { name: "taix", score: [70, 82, 53, 90] }
+                ],
+                cur: "",
+                package1: {
+                    count: 0,
+                    price: 10
+                },
+                package2: {
+                    count: 2,
+                    price: 5
+                }
+            },
+            computed: {
+                name() {
+                    return this.scores.filter((item) => item.score[2] < 60)
+                },
+                // price(){
+                //     return this.package1.count*this.package1.price+this.package2.count*this.package2.price
+                // }
+                price: {
+                    get() {
+                        return this.package1.count * this.package1.price + this.package2.count * this.package2.price
+                    },
+                    set(value) {
+                        console.log(value)
+                    }
+                }
+            },
+            watch: {
+                dat(news, old) {
+                    console.log(news, old)
+                }
+            },
+            methods: {
+                add() {
+                    this.package1.count++
+                    this.price = 100
+                },
+                sour(index) {
+                    this.cur = index
+                }
+            }
+        })
+        new Vue({
+            el: "#box",
+        })
+    </script>
+</body>
+
+</html>

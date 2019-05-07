@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+@mixin fn($width:100%,$height:100%){
+    width:$width;
+    height: $height;
+}
+.body,.html{
+    @include fn;
+}
+$fontsize:37.5px !default;
+@function rem($font){
+    @return $font/$fontsize*1rem
+}
+%center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.wrap{
+    @include fn;
+    .li1{
+        display: flex;
+        @include fn(100%,rem(40px));
+
+        span{
+            flex: 1;
+            @extend %center
+        }
+    }
+    .main{
+        .item{
+            @include fn(100%,rem(100px));
+            background: #ccc;
+            padding: 20px;
+            margin: rem(20px) 0,
+        }
+        
+    }
+}
+

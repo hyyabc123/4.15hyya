@@ -1,0 +1,73 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+body, html {
+  width: 100%;
+  height: 100%;
+}
+
+.wrap {
+  width: 100%;
+  height: 100%;
+}
+
+.wrap .item {
+  width: 100%;
+  height: 200px;
+  margin: 10px  0;
+  border-bottom: 1px solid #ccc;
+}
+
+.wrap .item dl {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.wrap .item dl dt {
+  padding: 0.53333rem;
+  flex: 2;
+}
+
+.wrap .item dl dt img {
+  width: 100%;
+  height: 100%;
+}
+
+.wrap .item dl dd {
+  padding: 0.53333rem;
+  flex: 5;
+}
+
+.wrap .item dl dd h5 {
+  margin: 0.53333rem 0;
+}
+
+.wrap .item dl dd span {
+  display: block;
+  margin: 0.53333rem 0;
+}
+
+.wrap .item dl dd li {
+  color: red;
+  margin: 0.53333rem 0;
+}
+
+.wrap .item dl dd .count {
+  width: 100px;
+  height: 30px;
+  display: flex;
+}
+
+.wrap .item dl dd .count div {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ccc;
+}

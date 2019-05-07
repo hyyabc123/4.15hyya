@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div class="active"></div>
+    <div class="active"></div>
+    <div class="active"></div>
+    <div class="active"></div>
+    <div class="active"></div>
+
+    <script>
+        // 一
+        function outName(classname) {  
+            return Array.from(document.getElementsByClassName(classname))
+            // return [...document.getElementsByClassName(classname)]
+        }
+        console.log(outName("active"))
+
+
+        // 二 
+        Array.prototype.inArray=function (attr,arr){
+            return this.findIndex((item)=>item===attr)
+        }
+        
+        var colors=["red","green","blue"]
+        console.log(colors.inArray("red","arr"))
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<template>
+        <div class="main_main">
+            <div class="main">
+                分类
+            </div>      
+            <my-footer></my-footer> 
+        </div>
+</template>
+<script>
+export default {
+    props:{
+
+    },
+    components:{
+
+    },
+    data(){
+        return {
+
+        }
+    },
+    computed:{
+
+    },
+    methods:{
+
+    },
+    created(){
+
+    },
+    mounted(){
+
+    }
+}
+</script>
+<style scoped lang="">
+
+</style>

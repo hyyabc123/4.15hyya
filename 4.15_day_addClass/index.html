@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .active{
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+
+        <!-- <input type="text" v-model="val">
+        <br>
+        {{ val }}
+        <select name="" id="" v-model= "age">  
+            <option :value="item" v-for="item in agearr">{{item}}</option>
+        </select>
+        您选择的是:{{ age }}
+        <input type="text" v-model = "grade">
+        <p>{{ grade }}</p>
+
+        
+        <div v-if="grade>=90 && grade < 100 ">优秀</div>
+        <div v-else-if="grade<90 && grade>=80 ">良好</div>
+        <div v-else-if="grade<80 && grade>=70 ">一般</div>
+        <div v-else>不及格</div> -->
+
+        <li v-for="(item,index) in agearr"  @click ="clic(item)" :class="{active:active == item}">
+            {{ item }}
+        </li>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script>
+        let vm = new Vue({
+            el: "#app",
+            data: {
+                val: "qkwqweqejel",
+                age:18,
+                agearr:[18,19,20],
+                grade:"60",
+                active:""
+            },
+            methods:{
+                clic(item){ 
+                    this.active = item
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

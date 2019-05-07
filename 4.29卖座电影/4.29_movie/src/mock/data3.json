@@ -1,0 +1,68 @@
+{
+    "status": 0,
+    "data": {
+        "film": {
+            "filmId": 4588,
+            "name": "复仇者联盟4：终局之战",
+            "poster": "https://pic.maizuo.com/usr/movie/4f7e815a241f3d933f6fbbde13a8267e.jpg",
+            "actors": [
+                {
+                    "name": "克里斯·埃文斯",
+                    "role": " 美国队长",
+                    "avatarAddress": "https://pic.maizuo.com/usr/movie/e73d8fd87e3284321ff8302e1155083d.jpg"
+                },
+                {
+                    "name": " 布丽·拉尔森 ",
+                    "role": "惊奇队长 ",
+                    "avatarAddress": "https://pic.maizuo.com/usr/movie/5cb1fd4bb9850ef3c5f19f88d26010c0.jpg"
+                },
+                {
+                    "name": "克里斯·海姆斯沃斯",
+                    "role": "雷神",
+                    "avatarAddress": "https://pic.maizuo.com/usr/movie/e20688434b3893e31d6a5f0dcc5198b2.jpg"
+                },
+                {
+                    "name": "斯嘉丽·约翰逊",
+                    "role": " 黑寡妇",
+                    "avatarAddress": "https://pic.maizuo.com/usr/movie/ecca5e91b82f4f5f60cfca26f3032530.jpg"
+                },
+                {
+                    "name": "小罗伯特·唐尼",
+                    "role": "钢铁侠",
+                    "avatarAddress": "https://pic.maizuo.com/usr/movie/145929082cb539cfaa2eeac809580c28.jpg"
+                }
+            ],
+            "director": "安东尼·罗素|乔·罗素",
+            "category": "动作|科幻|奇幻|冒险",
+            "synopsis": "《复仇者联盟4》（Untitled Avengers film）是未上映的美国超级英雄电影，改编自漫威漫画，也是漫威电影宇宙第22部影片。由安东尼·罗素和乔·罗素执导，小罗伯特·唐尼、乔什·布洛林、马克·鲁法洛、汤姆·希德勒斯顿、克里斯·埃文斯、汤姆·赫兰德等主演。",
+            "filmType": {
+                "name": "3D",
+                "value": 2
+            },
+            "nation": "美国",
+            "language": "英语",
+            "videoId": "XNDA5NzM0MDExMg==",
+            "premiereAt": 1556064000,
+            "timeType": 3,
+            "runtime": 182,
+            "photos": [
+                "https://pic.maizuo.com/usr/100004588/0f22cdb191ca93c61dbe1e2ad469b987.jpg",
+                "https://pic.maizuo.com/usr/100004588/3003d8e6240fa61494db9c32ba7e3339.jpg",
+                "https://pic.maizuo.com/usr/100004588/37ad50b58e7e331823e4d68d2479a13a.jpg",
+                "https://pic.maizuo.com/usr/100004588/7fed30a8fdf140c9934a7d94f518d8a8.jpg",
+                "https://pic.maizuo.com/usr/100004588/c541c7990cd2dbb8a4c71203a71cb017.jpg",
+                "https://pic.maizuo.com/usr/100004588/e1bd8bbe3631c19fcf9fa7f9ca5d5b32.jpg",
+                "https://pic.maizuo.com/usr/100004588/f77d0da86342d0db199d2d6fbfb5e5b6.jpg",
+                "https://pic.maizuo.com/usr/100004588/fc269accfc82d2892361b1a767cde5e7.jpg"
+            ],
+            "grade": "8.8",
+            "item": {
+                "name": "3D",
+                "type": 2
+            },
+            "isPresale": false,
+            "isSale": true
+        }
+    },
+    "msg": "ok"
+}

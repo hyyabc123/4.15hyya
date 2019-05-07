@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            box-sizing: border-box;
+            text-decoration: none;
+        }
+
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+        }
+
+        #app {
+            width: 100%;
+            height: 100%;
+        }
+
+        .header {
+            width: 100%;
+            height: 40px;
+            ;
+            border-bottom: 1px solid #000;
+            display: flex;
+        }
+
+        .header span {
+            flex: 1;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .active {
+            background: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <div class="header">
+            <span v-for="(item,index) in list" @click="fn(index)"
+                :class="{active:index==current}">{{ item.title }}</span>
+        </div>
+        <div class="main">
+            <li v-for="(item,index) in list[current].news">{{ item }}</li>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script>
+        new Vue({
+            el: "#app",
+            data: {
+                current: 0,
+                list: [
+                    {
+                        title: "首页",
+                        news: [
+                            "askljdklasjdklajskldj1",
+                            "salkd;lakdl;ak;ld2",
+                            "salkdjlkasjklda3"
+                        ]
+                    },
+                    {
+                        title: "第二页",
+                        news: [
+                            "askljdklasjdklajskldj4",
+                            "salkd;lakdl;ak;ld5",
+                            "salkdjlkasjklda6"
+                        ]
+                    }
+                ]
+            },
+            methods: {
+                fn(index) {
+                    this.current = index
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>
